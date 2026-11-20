@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>교통약자 이용 안내</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div class="brand">
+      <div id="signal" class="signal" aria-hidden="true">
+        <span class="lamp red"></span><span class="lamp yellow"></span><span class="lamp green"></span>
+      </div>
+      <div>
+        <h1>교통약자 이용 안내</h1>
+        <p class="sub">저상버스 · 환승 등의 정보를 알려드립니다</p>
+      </div>
+    </div>
+    <button id="reset" class="ghost" type="button" title="대화 지우기">새 대화</button>
+  </header>
+
+  <main id="chat" class="chat" aria-live="polite" aria-label="대화 내용">
+    <section id="welcome" class="welcome">
+      <h2>무엇을 도와드릴까요?</h2>
+      <p>아래 예시를 누르거나 직접 질문을 입력해 보세요.</p>
+      <div id="chips" class="chips" aria-label="예시 질문"></div>
+      <button id="more" class="more" type="button">↻</button>
+    </section>
+  </main>
+
+  <form id="form" class="composer" autocomplete="off">
+    <textarea id="input" rows="1" maxlength="1000" placeholder="질문을 입력하세요." aria-label="질문 입력"></textarea>
+    <button id="send" type="submit" aria-label="보내기">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M3.4 20.4 21 12 3.4 3.6 3.4 10l12 2-12 2z"/></svg>
+    </button>
+  </form>
+  <p class="note">안내서에 있는 내용만 답변하며, 실시간 운행 정보는 부산버스정보시스템에서 확인하세요.</p>
+</div>
+<script src="/app.js"></script>
+</body>
+</html>
